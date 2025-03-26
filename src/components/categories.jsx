@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-
-function Categories() {
-  const [activeIndex, setActiveIndex] = useState(2);
+import React from "react";
+function Categories({ value, onChangeCategory }) {
   const categories = [
     "Все",
     "Мясные",
@@ -11,22 +9,20 @@ function Categories() {
     "Закрытые",
   ];
 
-  const onClickCategory = (index) => {
-    setActiveIndex(index);
-  };
-
   return (
     <div className="categories">
       <ul>
-        {categories.map((values, index) => (
-          <li
-            key={index}
-            onClick={() => onClickCategory(index)}
-            className={activeIndex === index ? "active" : ""}
-          >
-            {values}
-          </li>
-        ))}
+        {categories.map((categoryName, i) => {
+          return (
+            <li
+              key={i}
+              onClick={() => onChangeCategory(i)}
+              className={value === i ? "active" : ""}
+            >
+              {categoryName}
+            </li>
+          );
+        })}
         {/*  */}
       </ul>
     </div>
