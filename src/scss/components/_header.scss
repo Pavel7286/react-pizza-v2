@@ -1,14 +1,9 @@
 @import "../variables";
 
 .header {
-  padding: 40px 0;
-  border-bottom: 1px solid $gray-line;
-
+  padding: 40px 0;  border-bottom: 1px solid $gray-line;
   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    display: flex;  justify-content: space-between;  align-items: center;
     @media (min-width: 320px) {
       flex-direction: column;
     }
@@ -30,12 +25,8 @@
     }
 
     h1 {
-      font-weight: 800;
-      font-size: 24px;
-      color: #181818;
-      text-transform: uppercase;
-      letter-spacing: 1%;
-    }
+      font-weight: 800;  font-size: 24px;  color: #181818;  text-transform: uppercase;  letter-spacing: 1%;
+      }
 
     p {
       color: #7b7b7b;
